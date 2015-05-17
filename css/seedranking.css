@@ -303,7 +303,8 @@ header {
 } 
 
 #real-navbar {
-    background-color: #f8f8f8;
+    background-color: white;
+    border-bottom: 1px solid #0D47A1;
 }
 
 /******************************************/
