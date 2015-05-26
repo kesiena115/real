@@ -97,6 +97,7 @@ $(document).ready(function() {
         $('#course-for-you .blue-clickable').removeClass('active');
         $('#course-for-you .blue-link').removeClass('active');
     });
+
 });
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

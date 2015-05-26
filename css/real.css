@@ -23,6 +23,7 @@ body {
 
 p {
     padding: 10px;
+    margin: 0;
 }
 
 #real-logo {
@@ -192,8 +193,8 @@ header {
 
 .circle {
     border-radius: 50%;
-    width: 200px;
-    height: 200px; 
+    width: 140px;
+    height: 140px; 
     margin: 0 auto;
 }
 
@@ -209,11 +210,16 @@ header {
 }
 
 .overlay-circle {
+    background-color: rgb(47,43,40);
     opacity: .5;
     position:absolute;
     z-index:20;
     top:0px;
     visibility: hidden;
+}
+
+.person-circle:hover .overlay-circle {
+    visibility: visible;
 }
 
 .person-circle {
@@ -224,22 +230,28 @@ header {
 .person-img {
     width:140px;
     height:140px;
-    position:absolute;
-    top:10px;
     z-index: 10;
-    left:10px;
     border-radius: 50%;
 }
 
 .person-holder {
     text-align: center;
     position:relative;
-    padding-left:15px;
-    padding-right:15px;
 }
 
 .person-content {
-    text-align: left;
+    text-align: justify;
+    font-size: 14px;
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.faculty-row {
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
 }
 
 .icon-container {
