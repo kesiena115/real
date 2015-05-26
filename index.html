@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/seedranking.css" rel="stylesheet">
+    <link href="css/real.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,28 +36,26 @@
 
     <!-- Navigation -->
     <nav id="real-navbar" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#real-navbar-links">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="fa fa-bars"></span>
                 </button>
-                <a class="" href="#home">
+                <a id="real-logo" href="./">
                     Real @ MIT
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="real-navbar-links">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll active">
                         <a href="#welcome">Welcome</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">The Course</a>
+                        <a href="#course">The Course</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#faculty">Faculty</a>
@@ -81,37 +79,54 @@
 
     <!-- Welcome Section -->
     <section id="welcome">
-        <div class="welcome-overlay"></div>
+        <!-- <div class="welcome-overlay"></div> -->
         <div id="welcome-text">
             <p id="welcome-title">Welcome to REAL @ MIT</p>
-            <p id="welcome-subtitle">REAL: Regional Entrepreneurial Acceleration Lab</p>
+            <p id="welcome-subtitle">REAL: Regional Entrepreneurship Acceleration Lab</p>
         </div>
     </section>
 
     <!-- About the Course Section -->
-    <section class="white-background" id="about">
+    <section class="white-background" id="course">
         <div>
             <div class="row about-row">
                 <div class="col-xs-10 col-xs-offset-1 text-center">
-                    <h2 id="about">About </h2>
+                    <h2 id="about" class="section-title">The Course</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
+            <div class="row about-row">
+                <div class="col-sm-4 icon-container" id="course-overview">
+                    <div class="circle blue-real blue-clickable">
+                        <i class="fa fa-book course-icons"></i>
+                    </div>
+                    <h3>Course Overview</h3>
                     <p>
-                        some text
+                        The REAL Lab is designed to provide students with the foundational knowledge, insights and tools that they need to be more effective participants in regional entrepreneurial ecosystems, in whichever key stakeholder category they see themselves: entrepreneurs, risk capital, universities, large corporate and government. <a class="blue-link" href="#">Read more</a>
                     </p>
+                </div>
+                <div class="col-sm-4 icon-container middle-container"  id="course-format">
+                    <div class="circle pink-clickable pink-real">
+                        <i class="fa fa-cogs course-icons"></i>
+                    </div>
+                    <h3>Course Format</h3>
                     <p>
-                        some more text
+                        We aim to have a strongly interactive class (with around 30 students) that meets once a week (Thursday 6pm-8pm).  There will be readings for each session and students will be expected to be prepared to make insightful and thoughtful contributions to class discussions. <a class="pink-link" href="#">Read more</a>
+                    </p>
+                </div>
+                <div class="col-sm-4 icon-container"  id="course-for-you">
+                    <div class="circle blue-clickable blue-real">
+                        <i class="fa fa-question-circle course-icons"></i>
+                    </div>
+                    <h3>Is this course for you?</h3>
+                    <p>
+                        The course is open to students from across the MIT community and beyond.  It is likely to be of particular interest to students from MIT Sloan and DUSP as well as the Harvard Kennedy School of Government and Business School.  Students in the TPP, EMBA, MBA, and SF programs will find this of particular interest. <a class="blue-link" href="#">Read more</a>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pic 2 -->
-    <section>
-      
+    <section class="section-pic" id="pre-faculty-pic">
     </section>
 
 
@@ -120,7 +135,7 @@
         <div>
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 text-center">
-                    <h2>Faculty</h2>
+                    <h2 class="section-title">Faculty</h2>
                 </div>
             </div>
             <!-- CHANGED THE NAME OF CLASS, MIGHT IMPACT CSS before team-row team-row1-->
@@ -167,31 +182,44 @@
         </div>
     </section>
 
-    <!-- Pic 3 -->
-    <section>
-      
+    <section class="section-pic" id="pre-apply-pic">
     </section>
 
     <!-- Apply Section -->
     <section id="apply">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 text-center">
+                <h2 id="about" class="section-title">Apply</h2>
+            </div>
+        </div>
+        <div class="row" id="application-form">
+            <iframe src="https://survey.qualtrics.com/jfe/form/SV_bKNuxFJdpSqWvZ3">
+              <p>Your browser does not support iframes. Please <a href="https://survey.qualtrics.com/jfe/form/SV_bKNuxFJdpSqWvZ3"> apply here</a></p>
+            </iframe>
+        </div>    
 
     </section>
 
-    <!-- Pic 3 -->
-    <section>
-      
+    <section class="section-pic" id="pre-resource-pic">
     </section>
 
     <!-- Resources Section -->
     <section id="resources">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 text-center">
+                <h2 id="about" class="section-title">Resources</h2>
+            </div>
+        </div>
+    </section>
 
+    <section class="section-pic" id="pre-contact-pic">
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 text-center">
-                <h2>Contact Us</h2>
+                <h2 class="section-title">Contact Us</h2>
             </div>
         </div>
         <div class="row">
@@ -252,7 +280,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-10 col-xs-offset-1">
-                        Copyright &copy; Seed Accelerator Rankings Project 2015
+                        Copyright &copy; REAL @ MIT
                     </div>
                 </div>
             </div>
@@ -260,7 +288,7 @@
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
+    <div class="scroll-top page-scroll visible-xs visble-sm" title="Scroll to top">
         <a class="btn btn-primary" href="#home">
             <i class="fa fa-chevron-up"></i>
         </a>
@@ -282,7 +310,7 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/seedranking.js"></script>
+    <script src="js/real.js"></script>
 
 </body>
 

@@ -70,9 +70,38 @@ $(function() {
         jQuery(jQuery($(this).children()[0]).children()[2]).css('visibility','hidden');
     })
 
+$(document).ready(function() {
+    $('#course-overview .blue-clickable, #course-overview .blue-link').mouseover(function(){
+        $('#course-overview .blue-clickable').addClass('active');
+        $('#course-overview .blue-link').addClass('active');
+    });
+    $('#course-overview .blue-clickable, #course-overview .blue-link').mouseout(function(){
+        $('#course-overview .blue-clickable').removeClass('active');
+        $('#course-overview .blue-link').removeClass('active');
+    });
+
+    $('#course-format .pink-clickable, #course-format .pink-link').mouseover(function(){
+        $('#course-format .pink-clickable').addClass('active');
+        $('#course-format .pink-link').addClass('active');
+    });
+    $('#course-format .pink-clickable, #course-format .pink-link').mouseout(function(){
+        $('#course-format .pink-clickable').removeClass('active');
+        $('#course-format .pink-link').removeClass('active');
+    });
+
+    $('#course-for-you .blue-clickable, #course-for-you .blue-link').mouseover(function(){
+        $('#course-for-you .blue-clickable').addClass('active');
+        $('#course-for-you .blue-link').addClass('active');
+    });
+    $('#course-for-you .blue-clickable, #course-for-you .blue-link').mouseout(function(){
+        $('#course-for-you .blue-clickable').removeClass('active');
+        $('#course-for-you .blue-link').removeClass('active');
+    });
+});
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
-    target: '.navbar-fixed-top'
+    target: '.navbar-fixed-top',
+    offset: 300
 })
 
 // Closes the Responsive Menu on Menu Item Click
