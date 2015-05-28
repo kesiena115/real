@@ -41,6 +41,29 @@ p {
     height: 800px;
 }
 
+/*
+Todo: change these pics
+-----------------------
+*/
+#pre-overview-pic{
+    height: 600px;
+    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#pre-format-pic{
+    height: 600px;
+    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#pre-course-for-you-pic{
+    height: 600px;
+    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
 #pre-faculty-pic{
     height: 600px;
     background: url('../img/fiona-teaching.jpg') no-repeat center center fixed;
@@ -63,6 +86,17 @@ p {
     height: 600px;
     background: url('../img/mit-simmons.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+#contact button {
+    background-color: white;
+    color: #00aeef;
+    border: 1px solid #00aeef;
+}
+
+#contact button:hover, #contact button:focus {
+    background-color: rgb(37, 132, 184);
+    color: white;
 }
 
 section.text-section {
@@ -333,6 +367,7 @@ a.faculty-link {
 .person-holder {
     text-align: center;
     position:relative;
+    margin-bottom: 50px;
 }
 
 .icon-container {
