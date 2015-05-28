@@ -46,56 +46,40 @@ $(function() {
 });
 
 
-    $('.person-holder').mouseover(function() {
-        if (jQuery($(this).children()[0]).hasClass('red-reap')) {
-            jQuery($(this).children()[0]).removeClass('red-reap');
-            jQuery($(this).children()[0]).addClass('dark-blue-reap');
-        }
+    $('.faculty-link').mouseover(function() {
+        $(this).addClass('active');
     })
 
-    $('.person-holder').mouseout(function() {
-        if (jQuery($(this).children()[0]).hasClass('dark-blue-reap')) {
-            jQuery($(this).children()[0]).removeClass('dark-blue-reap');
-            jQuery($(this).children()[0]).addClass('red-reap');
-        }
-    })
-
-    $('.person-holder').mouseover(function() {
-        jQuery(jQuery($(this).children()[0]).children()[1]).css('visibility','visible');    
-        jQuery(jQuery($(this).children()[0]).children()[2]).css('visibility','visible');        
-    })
-
-    $('.person-holder').mouseout(function() {
-        jQuery(jQuery($(this).children()[0]).children()[1]).css('visibility','hidden');
-        jQuery(jQuery($(this).children()[0]).children()[2]).css('visibility','hidden');
+    $('.faculty-link').mouseout(function() {
+        $(this).removeClass('active');
     })
 
 $(document).ready(function() {
-    $('#course-overview .blue-clickable, #course-overview .blue-link').mouseover(function(){
-        $('#course-overview .blue-clickable').addClass('active');
-        $('#course-overview .blue-link').addClass('active');
+    $('#overview-snippet .blue-clickable, #overview-snippet .blue-link').mouseover(function(){
+        $('#overview-snippet .blue-clickable').addClass('active');
+        $('#overview-snippet .blue-link').addClass('active');
     });
-    $('#course-overview .blue-clickable, #course-overview .blue-link').mouseout(function(){
-        $('#course-overview .blue-clickable').removeClass('active');
-        $('#course-overview .blue-link').removeClass('active');
-    });
-
-    $('#course-format .pink-clickable, #course-format .pink-link').mouseover(function(){
-        $('#course-format .pink-clickable').addClass('active');
-        $('#course-format .pink-link').addClass('active');
-    });
-    $('#course-format .pink-clickable, #course-format .pink-link').mouseout(function(){
-        $('#course-format .pink-clickable').removeClass('active');
-        $('#course-format .pink-link').removeClass('active');
+    $('#overview-snippet .blue-clickable, #overview-snippet .blue-link').mouseout(function(){
+        $('#overview-snippet .blue-clickable').removeClass('active');
+        $('#overview-snippet .blue-link').removeClass('active');
     });
 
-    $('#course-for-you .blue-clickable, #course-for-you .blue-link').mouseover(function(){
-        $('#course-for-you .blue-clickable').addClass('active');
-        $('#course-for-you .blue-link').addClass('active');
+    $('#format-snippet .pink-clickable, #format-snippet .pink-link').mouseover(function(){
+        $('#format-snippet .pink-clickable').addClass('active');
+        $('#format-snippet .pink-link').addClass('active');
     });
-    $('#course-for-you .blue-clickable, #course-for-you .blue-link').mouseout(function(){
-        $('#course-for-you .blue-clickable').removeClass('active');
-        $('#course-for-you .blue-link').removeClass('active');
+    $('#format-snippet .pink-clickable, #format-snippet .pink-link').mouseout(function(){
+        $('#format-snippet .pink-clickable').removeClass('active');
+        $('#format-snippet .pink-link').removeClass('active');
+    });
+
+    $('#course-for-you-snippet .blue-clickable, #course-for-you .blue-link').mouseover(function(){
+        $('#course-for-you-snippet .blue-clickable').addClass('active');
+        $('#course-for-you-snippet .blue-link').addClass('active');
+    });
+    $('#course-for-you-snippet .blue-clickable, #course-for-you .blue-link').mouseout(function(){
+        $('#course-for-you-snippet .blue-clickable').removeClass('active');
+        $('#course-for-you-snippet .blue-link').removeClass('active');
     });
 
 });

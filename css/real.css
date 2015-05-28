@@ -6,11 +6,20 @@
 
 body {
     overflow-x: hidden;
-    background-color: #eeeeee;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    /*background-color: #eeeeee;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 15px;
     margin:0;
     padding:0;
+    color: #333333;
+}
+
+p {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: 15px;
+    padding: 10px;
+    margin: 0;
+    /*color: #666666;*/
 }
 
 .bold-text {
@@ -19,11 +28,6 @@ body {
 
 .italic-text {
     font-style: italic
-}
-
-p {
-    padding: 10px;
-    margin: 0;
 }
 
 #real-logo {
@@ -60,6 +64,89 @@ p {
     background: url('../img/mit-simmons.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+
+section.text-section {
+    width: 85%;
+    margin: auto;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.resources-row {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.text-section a {
+    padding: 2px 3px;
+    background-color: white;
+    text-decoration: none;
+    color: #00aeef;
+}
+
+.text-section a:hover, .text-section a:focus {
+    color: white;
+    background-color: rgb(37, 132, 184);
+    border-radius: 5px;
+}
+
+.resource-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 2%;
+    border: 1px solid #00aeef;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 20px 10px;
+}
+
+.resource-container:hover, .resource-container:focus {
+    background-color: rgb(37,132,184);
+}
+
+.resource-container:hover .description, .resource-container:focus .description{
+    background-color: rgb(37,132,184);
+    color: white;
+}
+
+.resource-container img{
+    width: 100%;
+}
+
+.resource-container > div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.resource-container .description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*min-height: 45px;*/
+    padding: 2px 5px;
+    background-color: white;
+    color: #00aeef;
+    text-align: center;
+}
+
+.description p{
+    padding: 0;
+}
+
+.resource-container .title {
+    font-size: 15px;
+}
+
+.resource-container .author {
+    font-size: 13px;
+}
+
 
 /*.section-pic {
   width:100%;
@@ -157,12 +244,6 @@ header {
     border-top: none;
 }
 
-.person-name {
-    font-size: 20px;
-    font-weight: 800;
-    margin:0;
-}
-
 #rankings .embedded-ranking-image {
     height:250px;
 }
@@ -193,59 +274,16 @@ header {
 
 .circle {
     border-radius: 50%;
-    width: 140px;
-    height: 140px; 
-    margin: 0 auto;
+    display: inline-block;
 }
 
-.name-label {
-    position:absolute;
-    visibility: hidden;
-    z-index:30;
-    top: 50px;
-    width: 88%;
-    margin-left: 6%;
-    font-size: 16px;
-    padding: 0;
-}
-
-.overlay-circle {
-    background-color: rgb(47,43,40);
-    opacity: .5;
-    position:absolute;
-    z-index:20;
-    top:0px;
-    visibility: hidden;
-}
-
-.person-circle:hover .overlay-circle {
-    visibility: visible;
-}
-
-.person-circle {
-    position:relative;
-    z-index: 1;
-}
-
-.person-img {
-    width:140px;
-    height:140px;
-    z-index: 10;
-    border-radius: 50%;
-}
-
-.person-holder {
-    text-align: center;
-    position:relative;
-}
-
-.person-content {
+.bio p {
     text-align: justify;
-    font-size: 14px;
     width: 95%;
     position: relative;
-    margin: 0 auto;
-
+    margin: auto;
+    line-height: 25px;
+    padding-bottom: 0px;
 }
 
 .faculty-row {
@@ -254,13 +292,62 @@ header {
     margin: 0 auto;
 }
 
+a.faculty-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.faculty-link p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00aeef;
+    padding-bottom: 0px;
+}
+
+.faculty-link.active p {
+    color: rgb(37, 132, 184);
+}
+
+.faculty-link > .circle {
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #00aeef;
+
+}
+
+.faculty-link.active > .circle{
+    background-color: rgb(37, 132, 184);
+}
+
+.person-img {
+    width:100%;
+    height:100%;
+    position: relative;
+    z-index: 20;
+    border-radius: 50%;
+}
+
+.person-holder {
+    text-align: center;
+    position:relative;
+}
+
 .icon-container {
     text-align: center;
 }
 
 .icon-container p {
     text-align: left;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.icon-container .circle {
+    width: 180px;
+    height: 180px; 
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) { /* Phones*/
@@ -319,7 +406,7 @@ header {
 }
 
 .fa.course-icons {
-    font-size: 140px;
+    font-size: 120px;
     top: 30px;
     position: relative;
     color: white;
@@ -364,22 +451,7 @@ header {
 .white-text {
     color: white;
 }
-/* End of faculty images on the resources pages */
 
-#top-rankings-header {
-    font-size: 30px;
-    font-weight: 800;
-    color: #1b75bc;
-}
-
-.col-centered {
-    float: none;
-    margin: 0 auto;
-}
-
-.article-container {
-    padding:20px;
-}
 
 .article-inner.highlighted-article{
   border: 1px solid #428bca;
@@ -395,41 +467,6 @@ header {
     -moz-box-shadow: 0 1px 1px #999999;
     -webkit-box-shadow: 0 1px 1px #999999;
     position:relative;
-}
-
-.article-inner:hover {
-    border: 1px solid #1b75bc;
-}
-
-.article-image {
-    width:100%;
-}
-.article-image-container {
-    height:95%;
-    width:96%;
-    overflow:hidden;
-    position:absolute;
-}
-
-.article-description {
-    position:absolute;
-    bottom:5px;
-    text-align: center;
-    padding:2px 5px 2px 5px;
-    width:96%;
-    text-decoration:none;
-    color:white;
-    background-color:rgba(0,0,0,.6);
-}
-
-.article-title {
-    font-weight: 800;
-    font-size: 18px;
-}
-
-.article-author {
-    /*font-weight: 800;*/
-    font-size: 14px;
 }
 
 .white-background {
@@ -462,16 +499,35 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+#real-navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media(max-width:767px) {
+    #real-navbar .dropdown-menu {
+        background-color: transparent;
+    }
+}
+
+#real-navbar .dropdown-menu>li>a {
+    color: white;
+}
+
+#real-navbar .dropdown-menu>li>a:hover, #real-navbar .dropdown-menu>li>a:focus {
+    color: #00aeef;
+}
+
 /******************************************/
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #666666;
-}
+
 
 p.small {
     font-size: 16px;
+}
+
+a {
+    outline: 0;
+    color: #00aeef;
 }
 
 a,
@@ -804,17 +860,6 @@ footer .footer-below {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.btn-social {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 20px;
-    line-height: 45px;
-}
-
 .btn:focus,
 .btn:active,
 .btn.active {
@@ -857,68 +902,4 @@ footer .footer-below {
 #real-navbar .navbar-toggle:focus, #real-navbar .navbar-toggle:hover {
     color: #00aeef;
     border-color: #00aeef;
-}
-
-.portfolio-modal .modal-content {
-    padding: 100px 0;
-    min-height: 100%;
-    border: 0;
-    border-radius: 0;
-    text-align: center;
-    background-clip: border-box;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.portfolio-modal .modal-content h2 {
-    margin: 0;
-    font-size: 3em;
-}
-
-.portfolio-modal .modal-content img {
-    margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content .item-details {
-    margin: 30px 0;
-}
-
-.portfolio-modal .close-modal {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.portfolio-modal .close-modal:hover {
-    opacity: .3;
-}
-
-.portfolio-modal .close-modal .lr {
-    z-index: 1051;
-    width: 1px;
-    height: 75px;
-    margin-left: 35px;
-    background-color: #2c3e50;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 1px;
-    height: 75px;
-    background-color: #2c3e50;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.portfolio-modal .modal-backdrop {
-    display: none;
-    opacity: 0;
 }
