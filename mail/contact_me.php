@@ -15,10 +15,10 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 	
 // Create the email and send the message
-$to = 'hochberg@mit.edu'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "SeedRankings Website Contact Form:  $name";
+$to = 'kesiena@mit.edu'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "REAL Website Contact Form:  $name";
 $email_body = "Name: $name\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: noreply@seedrankings.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers = "From: noreply@real.mit.edu\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
