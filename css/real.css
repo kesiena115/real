@@ -47,7 +47,7 @@ p {
     left: 0;
 }
 
-#welcome-text {
+#home-text {
     position: relative;
     top:18vw;
     display: inline-block;
@@ -58,7 +58,7 @@ p {
     z-index: 10;
 }
 
-#welcome-title {
+#home-title {
     font-size: 50px;
     color: #00aeef;
     width: 100%;
@@ -66,7 +66,7 @@ p {
     padding-bottom: 0;
 }
 
-#welcome-subtitle {
+#home-subtitle {
     font-size: 20px;
     color: #00aeef;
     width: 100%;
@@ -74,13 +74,13 @@ p {
     padding-top: 0;
 }
 
-#welcome {
+#home {
     text-align: center;
     background: url('../img/mit-dome.jpg') no-repeat center center fixed;
     height: 56.25vw;
 }
 
-#post-welcome-summary {
+#post-home-summary {
     background-color: #00aeef;
     text-align: center;
     color: white;
@@ -88,7 +88,7 @@ p {
     margin: auto;
 }
 
-#post-welcome-summary p {
+#post-home-summary p {
     font-size: 25px;
     line-height: 40px;
 }
@@ -98,20 +98,20 @@ p {
     display: none;
   }
 
-  #welcome-text {
+  #home-text {
     top:150px;
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  #welcome {
+  #home {
     height: 800px;
   }
 
-  #post-welcome-summary {
+  #post-home-summary {
     padding: 40px 0px;
 }
 
-  #post-welcome-summary p {
+  #post-home-summary p {
     font-size: 20px;
   }
 }
@@ -266,13 +266,13 @@ section.text-section {
   /* This changes the behavior of the images from "fixed" to "scroll". This ensures consistency
   across all mobile devices because iphone and ipad don't allow fixed background images */
 
-  #welcome, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
+  #home, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
   #pre-faculty-pic, #pre-apply-pic, #pre-resource-pic, #pre-contact-pic {
     background-attachment: scroll; 
   }
 }
 
-/*.welcome-overlay{
+/*.home-overlay{
     position:relative;
     width: 100%;
     height: 600px;
@@ -284,11 +284,11 @@ section.text-section {
 }*/
 
 @media (max-width: 768px) { /* Phones*/
-  #welcome-title {
+  #home-title {
         font-size: 32px;
     }
 
-    #welcome-subtitle {
+    #home-subtitle {
         font-size: 14px;
     }
 }
