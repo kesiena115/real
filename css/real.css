@@ -304,7 +304,7 @@ a.faculty-link {
 }
 
 .faculty-link p {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     color: #00aeef;
     padding-bottom: 0px;
@@ -649,11 +649,11 @@ section h3 {
     }
 
     section h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     section h3 {
-        font-size: 17px;
+        font-size: 18px;
     }
 }
 
@@ -796,7 +796,7 @@ footer .footer-below {
 
 @media (max-width: 768px) { /* Phones*/
   #home-title {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     #home-subtitle {
@@ -812,15 +812,20 @@ footer .footer-below {
         height: 800px;
     }
 
-    .bio p {
-        text-align: left;
-    }
-
     #post-home-summary {
         padding: 30px 0px;
     }
 
     #post-home-summary p {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .bio p {
+        text-align: left;
+    }
+
+    section.text-section {
+        text-align: left;
     }
 }
