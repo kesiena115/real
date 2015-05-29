@@ -22,6 +22,10 @@ p {
     /*color: #666666;*/
 }
 
+li {
+    font-size: 15px;
+}
+
 .bold-text {
     font-weight: bolder;
 }
@@ -91,32 +95,6 @@ p {
 #post-home-summary p {
     font-size: 25px;
     line-height: 40px;
-}
-
-@media (max-width: 850px) { 
-    /* For phones and small tablets, do not show video in the home page.
-    850px is the point below which the menu appears under the logo on the
-    left.*/
-  .home-video {
-    display: none;
-  }
-
-  #home-text {
-    top:150px;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  #home {
-    height: 800px;
-  }
-
-  #post-home-summary {
-    padding: 40px 0px;
-}
-
-  #post-home-summary p {
-    font-size: 20px;
-  }
 }
 
 #pre-overview-pic{
@@ -286,34 +264,6 @@ section.text-section {
     opacity: 0.4;
 }*/
 
-@media (max-width: 768px) { /* Phones*/
-  #home-title {
-        font-size: 32px;
-    }
-
-    #home-subtitle {
-        font-size: 14px;
-    }
-
-    #home, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
-    #pre-faculty-pic, #pre-apply-pic, #pre-resource-pic, #pre-contact-pic {
-        height: 400px;
-    }
-
-    #home {
-        height: 700px;
-    }
-
-    section.text-section {
-        text-align: left;
-        font-size: 14px;
-    }
-
-    .bio p {
-        text-align: left;
-    }
-}
-
 .section-title {
     padding-bottom: 20px;
 }
@@ -354,7 +304,7 @@ a.faculty-link {
 }
 
 .faculty-link p {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: #00aeef;
     padding-bottom: 0px;
@@ -389,7 +339,7 @@ a.faculty-link {
 .overlay > p {
     color: white;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     top: 30px;
 }
@@ -432,14 +382,7 @@ a.faculty-link {
 }
 
 @media (max-width: 768px) { /* Phones*/
-    #application-form > iframe {
-        width: 100%;
-        height: 850px;
-    }
-}
-
-.icon-container h3 {
-    font-size: 22px;
+    
 }
 
 .icon-container.middle-container {
@@ -448,6 +391,11 @@ a.faculty-link {
 }
 
 @media (max-width: 768px) { /* mobile phone */
+    #application-form > iframe {
+        width: 100%;
+        height: 850px;
+    }
+
   .icon-container.middle-container {
     border-top: 1px solid rgb(220, 220, 220);
     border-bottom: 1px solid rgb(220, 220, 220);
@@ -601,12 +549,6 @@ a.faculty-link {
     color: #00aeef;
 }
 
-/******************************************/
-
-p.small {
-    font-size: 16px;
-}
-
 a {
     outline: 0;
     color: #00aeef;
@@ -693,6 +635,10 @@ section h2 {
     font-size: 32px;
 }
 
+section h3 {
+    font-size: 22px;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -703,7 +649,11 @@ section h2 {
     }
 
     section h2 {
-        font-size: 28px;
+        font-size: 20px;
+    }
+
+    section h3 {
+        font-size: 17px;
     }
 }
 
@@ -827,4 +777,50 @@ footer .footer-below {
 #real-navbar .navbar-toggle:focus, #real-navbar .navbar-toggle:hover {
     color: #00aeef;
     border-color: #00aeef;
+}
+
+@media (max-width: 850px) { 
+    /* For phones and small tablets, do not show video in the home page.
+    850px is the point below which the menu appears under the logo on the
+    left.*/
+  .home-video {
+    display: none;
+  }
+
+  #home-text {
+    top:150px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+}
+
+@media (max-width: 768px) { /* Phones*/
+  #home-title {
+        font-size: 20px;
+    }
+
+    #home-subtitle {
+        font-size: 15px;
+    }
+
+    #home, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
+    #pre-faculty-pic, #pre-apply-pic, #pre-resource-pic, #pre-contact-pic {
+        height: 400px;
+    }
+
+    #home {
+        height: 800px;
+    }
+
+    .bio p {
+        text-align: left;
+    }
+
+    #post-home-summary {
+        padding: 30px 0px;
+    }
+
+    #post-home-summary p {
+        font-size: 18px;
+    }
 }
