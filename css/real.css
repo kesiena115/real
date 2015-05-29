@@ -325,13 +325,13 @@ a.faculty-link {
 }
 
 .faculty-link .overlay {
-    width: 138px;
-    height: 138px;
+    width: 139px;
+    height: 139px;
     padding: 10px;
     z-index: 20;
     position: absolute;
     top: 10px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.6);
     text-align: center;
     display: none;
 }
