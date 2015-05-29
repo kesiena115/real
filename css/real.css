@@ -93,7 +93,10 @@ p {
     line-height: 40px;
 }
 
-@media (max-width: 768px) { /* Phones*/
+@media (max-width: 850px) { 
+    /* For phones and small tablets, do not show video in the home page.
+    850px is the point below which the menu appears under the logo on the
+    left.*/
   .home-video {
     display: none;
   }
