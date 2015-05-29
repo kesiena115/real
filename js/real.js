@@ -1,32 +1,17 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-// $(function() {
-//     $('body').on('click', '.page-scroll a', function(event) {
-//         var $anchor = $(this);
-//         $('html, body').stop().animate({
-//             scrollTop: $($anchor.attr('href')).offset().top
-//         }, 1000, 'easeOutExpo');
-//         event.preventDefault();
-//     });
-// });
-
 // jQuery for page scrolling feature
 $("body a[href^='#']").on('click', function(e) {
-    // prevent default anchor click behavior
     e.preventDefault();
 
     // store hash
     var hash = this.hash;
+    if(!hash) {
+        return;
+    }
 
     // animate
     $('html, body').animate({
        scrollTop: $(this.hash).offset().top
-     }, 1000, 'easeOutExpo', function(){
+     }, 1500, function(){
 
        // when done, add hash to url
        // (default click behaviour)
@@ -44,15 +29,6 @@ $(function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
 });
-
-
-    $('.faculty-link').mouseover(function() {
-        $(this).addClass('active');
-    })
-
-    $('.faculty-link').mouseout(function() {
-        $(this).removeClass('active');
-    })
 
 $(document).ready(function() {
     $('#overview-snippet .blue-clickable, #overview-snippet .blue-link').mouseover(function(){
@@ -82,6 +58,14 @@ $(document).ready(function() {
         $('#course-for-you-snippet .blue-link').removeClass('active');
     });
 
+    $('.faculty-link').mouseover(function() {
+        $(this).addClass('active');
+    })
+
+    $('.faculty-link').mouseout(function() {
+        $(this).removeClass('active');
+    })
+
 });
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
@@ -90,6 +74,6 @@ $('body').scrollspy({
 })
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+$('.navbar-collapse ul li a').not('.dropdown-toggle').click(function() {
     $('.navbar-toggle:visible').click();
 });

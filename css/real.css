@@ -37,54 +37,51 @@ p {
 
 #welcome {
     text-align: center;
-    background: url('../img/mit5.jpg') no-repeat center center fixed;
+    background: url('../img/mit-dome.jpg') no-repeat center center fixed;
     height: 800px;
 }
 
-/*
-Todo: change these pics
------------------------
-*/
 #pre-overview-pic{
     height: 600px;
     background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: rgb(37, 132, 184);
 }
 
 #pre-format-pic{
     height: 600px;
-    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background: url('../img/pentacle2.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 #pre-course-for-you-pic{
     height: 600px;
-    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background: url('../img/mit-sloan.jpg') no-repeat top center fixed;
     background-size: cover;
 }
 
 
 #pre-faculty-pic{
     height: 600px;
-    background: url('../img/fiona-teaching.jpg') no-repeat center center fixed;
+    background: url('../img/budden-patrick.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #pre-apply-pic{
     height: 600px;
-    background: url('../img/mit-sloan.jpg') no-repeat top center fixed;
+    background: url('../img/fiona-teaching.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #pre-resource-pic{
     height: 600px;
-    background: url('../img/cameron-murray.jpg') no-repeat center center fixed;
+    background: url('../img/mit-simmons.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 #pre-contact-pic{
     height: 600px;
-    background: url('../img/mit-simmons.jpg') no-repeat center center fixed;
+    background: url('../img/sloan-day.jpg') no-repeat top center fixed;
     background-size: cover;
 }
 
@@ -129,7 +126,7 @@ section.text-section {
 .resource-container {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 250px;
     padding: 2%;
     border: 1px solid #00aeef;
     background-color: white;
@@ -138,17 +135,10 @@ section.text-section {
     margin: 20px 10px;
 }
 
-.resource-container:hover, .resource-container:focus {
-    background-color: rgb(37,132,184);
-}
-
-.resource-container:hover .description, .resource-container:focus .description{
-    background-color: rgb(37,132,184);
-    color: white;
-}
-
 .resource-container img{
     width: 100%;
+    min-height: 81%;
+    border: 1px solid #00aeef;
 }
 
 .resource-container > div{
@@ -162,11 +152,26 @@ section.text-section {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /*min-height: 45px;*/
+    min-height: 20%;
     padding: 2px 5px;
     background-color: white;
     color: #00aeef;
+    border-top: 1px solid #00aeef;
     text-align: center;
+}
+
+.resource-container:hover, .resource-container:focus {
+    background-color: rgb(37,132,184);
+}
+
+.resource-container:hover .description, .resource-container:focus .description{
+    background-color: rgb(37,132,184);
+    border-color: white;
+    color: white;
+}
+
+.resource-container:hover img, .resource-container:focus img{
+    border-color: white;
 }
 
 .description p{
@@ -178,24 +183,17 @@ section.text-section {
 }
 
 .resource-container .author {
-    font-size: 13px;
+    font-size: 11px;
 }
 
-
-/*.section-pic {
-  width:100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position:relative;
-}*/
 
 @media (max-width: 1024px) { /* Phones and tablets */
   /* This changes the behavior of the images from "fixed" to "scroll". This ensures consistency
   across all mobile devices because iphone and ipad don't allow fixed background images */
-  .section-pic {
-    background-attachment: scroll;
+
+  #welcome, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
+  #pre-faculty-pic, #pre-apply-pic, #pre-resource-pic, #pre-contact-pic {
+    background-attachment: scroll; 
   }
 }
 
@@ -246,21 +244,8 @@ section.text-section {
     }
 }
 
-#team {
-    width: 90%;
-    margin-left:  auto;
-    margin-right:  auto;
-}
-
 .section-title {
     padding-bottom: 20px;
-}
-
-.team-row {
-    border-top: 2px solid #cccccc;
-    padding: 10px;
-    width: 90%;
-    margin: 0 auto;
 }
 
 .about-row {
@@ -273,42 +258,9 @@ header {
     background-color: white;
 }
 
-.team-row.team-
- {
-    border-top: none;
-}
-
-#rankings .embedded-ranking-image {
-    height:250px;
-}
-
-#research .research-image {
-    height:200px;
-    width: 96%;
-    padding: 0 auto;
-}
-
-#research .article-title {
-    font-size: 14px;
-}
-
-#research .article-author {
-    font-size: 12px;
-}
-
-#research h2 {
-    padding-bottom: 20px;
-}
-
-.ranking-details {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-}
-
 .circle {
     border-radius: 50%;
-    display: inline-block;
+    display: block;
 }
 
 .bio p {
@@ -338,7 +290,7 @@ a.faculty-link {
     padding-bottom: 0px;
 }
 
-.faculty-link.active p {
+.faculty-link.active .faculty-name {
     color: rgb(37, 132, 184);
 }
 
@@ -349,11 +301,35 @@ a.faculty-link {
     z-index: 10;
     background-color: white;
     border: 1px solid #00aeef;
+    text-align: center;
+}
 
+.faculty-link .overlay {
+    width: 138px;
+    height: 138px;
+    padding: 10px;
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    display: none;
+}
+
+.overlay > p {
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    position: relative;
+    top: 30px;
 }
 
 .faculty-link.active > .circle{
     background-color: rgb(37, 132, 184);
+}
+
+.faculty-link.active .overlay {
+    display: block;
 }
 
 .person-img {
@@ -476,6 +452,7 @@ a.faculty-link {
 
 #application-form > iframe {
     width: 800px;
+    max-width: 100%;
     height: 850px;
 }
 
@@ -542,6 +519,8 @@ a.faculty-link {
     #real-navbar .dropdown-menu {
         background-color: transparent;
     }
+
+
 }
 
 #real-navbar .dropdown-menu>li>a {
@@ -553,8 +532,6 @@ a.faculty-link {
 }
 
 /******************************************/
-
-
 
 p.small {
     font-size: 16px;
@@ -583,91 +560,6 @@ h6 {
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-}
-
-hr.star-light,
-hr.star-primary {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
-    border: 0;
-    border-top: solid 5px;
-    text-align: center;
-}
-
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-}
-
-hr.star-light {
-    border-color: #fff;
-}
-
-hr.star-light:after {
-    color: #fff;
-    background-color: #18bc9c;
-}
-
-hr.star-primary {
-    border-color: #2c3e50;
-}
-
-hr.star-primary:after {
-    color: #2c3e50;
-    background-color: #fff;
-}
-
-.img-centered {
-    margin: 0 auto;
-}
-
-header {
-    text-align: center;
-}
-
-header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-header img {
-    display: block;
-    margin: 0 auto 20px;
-}
-
-header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-}
-
-header .intro-text .skills {
-    font-size: 1.25em;
-    font-weight: 300;
-}
-
-@media(min-width:768px) {
-    header .container {
-        padding-top: 130px;
-        padding-bottom: 50px;
-    }
-
-    header .intro-text .name {
-        font-size: 4.75em;
-    }
-
-    header .intro-text .skills {
-        font-size: 1.75em;
-    }
 }
 
 @media(min-width:768px) {
@@ -722,14 +614,13 @@ section {
     background-color: white;
 }
 
-section h2 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
 section.success {
     color: #fff;
     background: #2c3e50;
+}
+
+section h2 {
+    font-size: 32px;
 }
 
 @media(max-width:767px) {
@@ -740,81 +631,10 @@ section.success {
     section.first {
         padding-top: 75px;
     }
-}
 
-#portfolio .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
-}
-
-#portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: rgba(24,188,156,.9);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-    margin-top: -12px;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-    margin: 0;
-}
-
-#portfolio * {
-    z-index: 2;
-}
-
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
+    section h2 {
+        font-size: 28px;
     }
-}
-
-.btn-outline {
-    margin-top: 15px;
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
-}
-
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 2px #fff;
-    color: #2c3e50;
-    background: #fff;
 }
 
 .floating-label-form-group {
