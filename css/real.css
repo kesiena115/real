@@ -294,6 +294,24 @@ section.text-section {
     #home-subtitle {
         font-size: 14px;
     }
+
+    #home, #pre-overview-pic, #pre-format-pic, #pre-course-for-you-pic, 
+    #pre-faculty-pic, #pre-apply-pic, #pre-resource-pic, #pre-contact-pic {
+        height: 400px;
+    }
+
+    #home {
+        height: 700px;
+    }
+
+    section.text-section {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .bio p {
+        text-align: left;
+    }
 }
 
 .section-title {
