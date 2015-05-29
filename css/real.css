@@ -31,14 +31,89 @@ p {
 }
 
 #real-logo {
-    font-size: 40px;
+    padding-top: 5px;
+    font-size: 30px;
     text-decoration: none;
+    display: inline-block;
+}
+
+.home-video {
+    min-width: 100vw;
+    height: 56.25vw;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+#welcome-text {
+    position: relative;
+    top:18vw;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#welcome-title {
+    font-size: 50px;
+    color: #00aeef;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#welcome-subtitle {
+    font-size: 20px;
+    color: #00aeef;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #welcome {
     text-align: center;
     background: url('../img/mit-dome.jpg') no-repeat center center fixed;
+    height: 56.25vw;
+}
+
+#post-welcome-summary {
+    background-color: #00aeef;
+    text-align: center;
+    color: white;
+    padding: 60px 0px;
+    margin: auto;
+}
+
+#post-welcome-summary p {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+@media (max-width: 768px) { /* Phones*/
+  .home-video {
+    display: none;
+  }
+
+  #welcome-text {
+    top:150px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  #welcome {
     height: 800px;
+  }
+
+  #post-welcome-summary {
+    padding: 40px 0px;
+}
+
+  #post-welcome-summary p {
+    font-size: 20px;
+  }
 }
 
 #pre-overview-pic{
@@ -207,32 +282,6 @@ section.text-section {
     top:-80px;
     opacity: 0.4;
 }*/
-
-#welcome-text {
-    position: relative;
-    top:200px;
-    display: inline-block;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 50px;
-    margin: 0 auto;
-}
-
-#welcome-title {
-    font-size: 60px;
-    color: #00aeef;
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-#welcome-subtitle {
-    font-size: 20px;
-    color: #00aeef;
-    width: 100%;
-    margin-top: 0;
-    padding-top: 0;
-}
 
 @media (max-width: 768px) { /* Phones*/
   #welcome-title {

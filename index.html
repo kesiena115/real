@@ -51,13 +51,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="real-navbar-links">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="page-scroll active">
-                        <a href="#welcome">Welcome</a>
-                    </li>
-                    <!-- <li class="page-scroll">
-                        <a href="#course">The Course</a>
-                    </li> -->
-                    <li class="dropdown">
+s                    <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">The Course <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="menu">
                         <li><a href="#course-overview">Course Overview</a></li>
@@ -87,10 +81,20 @@
 
     <!-- Welcome Section -->
     <section id="welcome">
-        <!-- <div class="welcome-overlay"></div> -->
+        <video autoplay loop class="home-video">
+            <source src="video/real-video.mp4" type="video/mp4">
+            <source src="video/real-video.ogv" type="video/ogg">
+        </video>
         <div id="welcome-text">
             <p id="welcome-title">Welcome to REAL @ MIT</p>
             <p id="welcome-subtitle">REAL: Regional Entrepreneurship Acceleration Lab</p>
+        </div>
+    </section>
+    <section id="post-welcome-summary">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+                <p>The REAL Lab is designed to provide students with the foundational knowledge, insights and tools that they need to be more effective participants in regional entrepreneurial ecosystems</p>
+            </div>
         </div>
     </section>
 
