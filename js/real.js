@@ -31,40 +31,110 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $('#overview-snippet .blue-clickable, #overview-snippet .blue-link').mouseover(function(){
+    $('#overview-snippet .blue-clickable, #overview-snippet .blue-btn').mouseover(function(){
         $('#overview-snippet .blue-clickable').addClass('active');
-        $('#overview-snippet .blue-link').addClass('active');
+        $('#overview-snippet .blue-btn').addClass('active');
     });
-    $('#overview-snippet .blue-clickable, #overview-snippet .blue-link').mouseout(function(){
+    $('#overview-snippet .blue-clickable, #overview-snippet .blue-btn').mouseout(function(){
         $('#overview-snippet .blue-clickable').removeClass('active');
-        $('#overview-snippet .blue-link').removeClass('active');
+        $('#overview-snippet .blue-btn').removeClass('active');
     });
 
-    $('#format-snippet .pink-clickable, #format-snippet .pink-link').mouseover(function(){
+    $('#format-snippet .pink-clickable, #format-snippet .pink-btn').mouseover(function(){
         $('#format-snippet .pink-clickable').addClass('active');
-        $('#format-snippet .pink-link').addClass('active');
+        $('#format-snippet .pink-btn').addClass('active');
     });
-    $('#format-snippet .pink-clickable, #format-snippet .pink-link').mouseout(function(){
+    $('#format-snippet .pink-clickable, #format-snippet .pink-btn').mouseout(function(){
         $('#format-snippet .pink-clickable').removeClass('active');
-        $('#format-snippet .pink-link').removeClass('active');
+        $('#format-snippet .pink-btn').removeClass('active');
     });
 
-    $('#course-for-you-snippet .blue-clickable, #course-for-you .blue-link').mouseover(function(){
+    $('#course-for-you-snippet .blue-clickable, #course-for-you-snippet .blue-btn').mouseover(function(){
         $('#course-for-you-snippet .blue-clickable').addClass('active');
-        $('#course-for-you-snippet .blue-link').addClass('active');
+        $('#course-for-you-snippet .blue-btn').addClass('active');
     });
-    $('#course-for-you-snippet .blue-clickable, #course-for-you .blue-link').mouseout(function(){
+    $('#course-for-you-snippet .blue-clickable, #course-for-you-snippet .blue-btn').mouseout(function(){
         $('#course-for-you-snippet .blue-clickable').removeClass('active');
-        $('#course-for-you-snippet .blue-link').removeClass('active');
+        $('#course-for-you-snippet .blue-btn').removeClass('active');
     });
 
-    $('.faculty-link').mouseover(function() {
-        $(this).addClass('active');
-    })
+    $('#fiona-bio-btn, #fiona-anchor').click(function(){
+        fionaBioToggle();
+    });
 
-    $('.faculty-link').mouseout(function() {
-        $(this).removeClass('active');
-    })
+    $('#fiona-anchor, #fiona-bio-btn').mouseover(function(){
+        fionaAnchorActiveToggle();
+    });
+
+    $('#fiona-anchor, #fiona-bio-btn').mouseout(function(){
+        fionaAnchorActiveToggle();
+    });
+
+    $('#phil-bio-btn, #phil-anchor').click(function(){
+        philBioToggle();
+    });
+
+    $('#phil-anchor, #phil-bio-btn').mouseover(function(){
+        philAnchorActiveToggle();
+    });
+
+    $('#phil-anchor, #phil-bio-btn').mouseout(function(){
+        philAnchorActiveToggle();
+    });
+
+    function fionaBioToggle() {
+        if($('#fiona-bio2').css('display') == 'none') {
+            $('#fiona-bio2').slideDown(2000, function(){
+                $('#fiona-bio-btn').html('Less');
+            });
+            $('#fiona-overlay-text').html('Minimize profile');
+        } else {
+            $('#fiona-bio2').hide(function(){
+                $('#fiona-bio-btn').html('Read More');
+            });
+            $('#fiona-overlay-text').html('View full profile');
+            window.location.href = "#faculty";
+        }
+    }
+
+    function philBioToggle() {
+        if($('#phil-bio2').css('display') == 'none') {
+            $('#phil-bio2').slideDown(500, function(){
+                $('#phil-bio-btn').html('Less');                
+            });
+            $('#phil-overlay-text').html('Minimize profile');
+        } else {
+            $('#phil-bio2').hide(function(){
+                $('#phil-bio-btn').html('Read More');
+            });
+            $('#phil-overlay-text').html('View full profile');
+            // window.location.href = "#faculty";
+        }
+    }
+
+    function fionaAnchorActiveToggle() {
+        if($('#fiona-bio-btn').hasClass('active')) {
+            $('#fiona-bio-btn').removeClass('active');
+            $('#fiona-anchor').removeClass('active');
+            $('#fiona-overlay-circle').hide();
+        } else {
+            $('#fiona-bio-btn').addClass('active');
+            $('#fiona-anchor').addClass('active');
+            $('#fiona-overlay-circle').show();
+        }
+    }
+
+    function philAnchorActiveToggle() {
+        if($('#phil-bio-btn').hasClass('active')) {
+            $('#phil-bio-btn').removeClass('active');
+            $('#phil-anchor').removeClass('active');
+            $('#phil-overlay-circle').hide();
+        } else {
+            $('#phil-bio-btn').addClass('active');
+            $('#phil-anchor').addClass('active');
+            $('#phil-overlay-circle').show();
+        }
+    }
 
 });
 // Highlight the top nav as scrolling occurs
