@@ -1,5 +1,9 @@
 // jQuery for page scrolling feature
 $("body a[href^='#']").on('click', function(e) {
+    if($(window).width() < 992) {
+        return; // Only scroll with md and large devices i.e. do not scroll in tablets or mobile phones.
+    }
+
     e.preventDefault();
 
     // store hash
@@ -31,6 +35,10 @@ $(function() {
 });
 
 $(document).ready(function() {
+    if(navigator.userAgent.match(/iPad/i) != null){
+        $('video').hide(); // Hide homepage video on ipad
+    }
+
     $('#overview-snippet .blue-clickable, #overview-snippet .blue-btn').mouseover(function(){
         $('#overview-snippet .blue-clickable').addClass('active');
         $('#overview-snippet .blue-btn').addClass('active');

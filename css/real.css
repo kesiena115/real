@@ -43,8 +43,7 @@ li {
 
 .home-video {
     min-width: 100vw;
-    height: 5
-    .25vw;
+    height: 56.25vw;
     position: absolute;
     margin: 0 auto;
     z-index: 0;
@@ -407,6 +406,7 @@ a.faculty-link {
 
 .icon-container {
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .icon-container p {
@@ -427,9 +427,11 @@ a.faculty-link {
 .icon-container.middle-container {
     border-right: 1px solid rgb(220, 220, 220);
     border-left: 1px solid rgb(220, 220, 220);
+    border-top: 0;
+    border-bottom: 0;
 }
 
-@media (max-width: 768px) { /* mobile phone */
+@media (max-width: 767px) { /* mobile phone */
     #application-form > iframe {
         width: 100%;
         height: 850px;
@@ -818,7 +820,7 @@ footer .footer-below {
     border-color: #00aeef;
 }
 
-@media (max-width: 850px) { 
+@media (max-width: 991px) { 
     /* For phones and small tablets, do not show video in the home page.
     850px is the point below which the menu appears under the logo on the
     left.*/
@@ -867,4 +869,8 @@ footer .footer-below {
     section.text-section {
         text-align: left;
     }
+}
+
+.underline {
+    text-decoration: underline;
 }
